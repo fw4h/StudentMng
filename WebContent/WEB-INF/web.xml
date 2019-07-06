@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>StudentMng</display-name>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+<!-- 		<welcome-file>index.html</welcome-file> -->
+<!-- 		<welcome-file>index.htm</welcome-file> -->
+<!-- 		<welcome-file>index.jsp</welcome-file> -->
+<!-- 		<welcome-file>default.html</welcome-file> -->
+<!-- 		<welcome-file>default.htm</welcome-file> -->
+<!-- 		<welcome-file>default.jsp</welcome-file> -->
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.student.demo.servlet.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/dologin.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateEntryServlet</servlet-name>
+		<servlet-class>com.student.demo.servlet.UpdateEntryServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateEntryServlet</servlet-name>
+		<url-pattern>/doupdate.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DisplayEntryServlet</servlet-name>
+		<servlet-class>com.student.demo.servlet.DisplayEntryServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DisplayEntryServlet</servlet-name>
+		<url-pattern>/dodisplay.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteServlet</servlet-name>
+		<servlet-class>com.student.demo.servlet.DeleteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DeleteServlet</servlet-name>
+		<url-pattern>/dodelete.do</url-pattern>
+	</servlet-mapping>
+</web-app>
